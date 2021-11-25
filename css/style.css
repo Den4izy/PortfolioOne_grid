@@ -1,0 +1,79 @@
+body{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+    /*grid-gap: 10px;*/
+    height: 95vh;
+    margin: 0;
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 120px 1fr;
+}
+#header{
+    padding: 5px;
+    background-color: #83c5f1;
+    grid-area: header;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+   
+   
+}
+#name{
+    height: 50%;
+    margin-top: 10px;
+    animation-name: anName;
+    animation-duration: 2s;
+   
+}
+@keyframes anName{
+    from{
+        margin-left: 300px;
+        opacity: 0;
+    }
+    to{
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+#photoIcon{
+    color:red;
+    width: 40px;
+    height: 40px;
+    background: url("./images/photo.PNG") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 40px 0 10px;
+}
+#nav{
+    padding: 5px;
+    background: royalblue;
+    grid-area: nav;
+    text-align: center;
+}
+.skillList{
+    text-align: left;
+   
+}
+ul{
+    list-style: none;
+    padding-inline-start: 0;
+}
+#main{
+    padding: 20px;
+    background: rebeccapurple;
+    background: url(./images/phone.jpg) no-repeat;
+    background-size: cover;
+    grid-area: main;
+}
+#footer{
+    padding: 20px;
+    background: black;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+.ti-email, .ti-facebook, .ti-instagram{
+    margin-left: 30px;
+    color: white;
+}
